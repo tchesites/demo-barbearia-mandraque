@@ -1,0 +1,86 @@
+---
+interface Props {
+  class?: string;
+}
+
+const { class: className } = Astro.props;
+---
+
+<svg
+  class:list={['emblem', className]}
+  viewBox="0 0 360 420"
+  role="img"
+  aria-label="Brasão da Barbearia Mombaque: escudo creme com bigode e a inscrição desde 2017"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <path
+    d="M180 8 L338 34 V260 C338 291 320 317 292 331 L180 410 L68 331 C40 317 22 291 22 260 V34 Z"
+    fill="var(--creme, #f4e2b8)"
+  />
+  <path
+    d="M180 30 L316 52 V259 C316 284 301 306 278 318 L180 385 L82 318 C59 306 44 284 44 259 V52 Z"
+    fill="none"
+    stroke="var(--cacau-700, #3a2317)"
+    stroke-width="2.5"
+  />
+
+  <text
+    x="180"
+    y="132"
+    text-anchor="middle"
+    fill="var(--cacau-700, #3a2317)"
+    font-family="'Hepta Slab', Georgia, serif"
+    font-size="47"
+    font-weight="800"
+    letter-spacing="1"
+    textLength="238"
+    lengthAdjust="spacingAndGlyphs"
+  >
+    BARBEARIA
+  </text>
+  <text
+    x="180"
+    y="188"
+    text-anchor="middle"
+    fill="var(--cacau-700, #3a2317)"
+    font-family="'Hepta Slab', Georgia, serif"
+    font-size="43"
+    font-weight="800"
+    letter-spacing="1"
+    textLength="244"
+    lengthAdjust="spacingAndGlyphs"
+  >
+    MOMBAQUE
+  </text>
+
+  <g transform="translate(106 160) scale(6.2)" fill="var(--cacau-700, #3a2317)">
+    <path
+      d="M21 12c-2 0-3-3-6-3s-3 2-3 2s0-2-3-2s-4 3-6 3c-1 0-2-1-2-1s1 5 5 5c5 0 6-3 6-3s1 3 6 3c4 0 5-5 5-5s-1 1-2 1"
+    />
+  </g>
+
+  <text
+    x="180"
+    y="316"
+    text-anchor="middle"
+    fill="var(--cacau-700, #3a2317)"
+    font-family="'Archivo', 'Segoe UI', sans-serif"
+    font-size="12"
+    font-weight="600"
+    letter-spacing="4"
+  >
+    DESDE
+  </text>
+  <text
+    x="180"
+    y="343"
+    text-anchor="middle"
+    fill="var(--cacau-700, #3a2317)"
+    font-family="'Hepta Slab', Georgia, serif"
+    font-size="18"
+    font-weight="700"
+    letter-spacing="2"
+  >
+    • 2017 •
+  </text>
+</svg>

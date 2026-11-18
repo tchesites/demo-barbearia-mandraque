@@ -1,0 +1,38 @@
+:root {
+  /* Cores — identidade Mombaque (brasão creme sobre cacau) */
+  --tinta: #190d07;
+  --cacau-900: #21120b;
+  --cacau: #2b1810;
+  --cacau-700: #3a2317;
+  --cacau-600: #4b2e1f;
+  --creme: #f4e2b8;
+  --creme-forte: #fbf0d2;
+  --palha: #cec793;
+  --bronze: #b27a4a;
+  --bronze-claro: #d3a273;
+  --vermelho: #7d2c21;
+  --texto: #f4e2b8;
+  --texto-suave: #c9b7a2;
+  --borda: rgba(244, 226, 184, 0.18);
+  --borda-forte: rgba(244, 226, 184, 0.42);
+  --sombra-dura: 12px 14px 0 rgba(20, 10, 5, 0.28);
+
+  /* Tipografia */
+  --font-display: 'Hepta Slab', 'Rockwell', Georgia, serif;
+  --font-body: 'Archivo', 'Segoe UI', system-ui, sans-serif;
+
+  --text-xs: 0.75rem;
+  --text-sm: 0.875rem;
+  --text-base: 1rem;
+  --text-lg: clamp(1.05rem, 1.4vw, 1.2rem);
+  --text-xl: clamp(1.3rem, 2vw, 1.65rem);
+  --text-2xl: clamp(2rem, 4.2vw, 3.2rem);
+  --text-3xl: clamp(2.8rem, 7vw, 5.5rem);
+
+  /* Layout */
+  --container: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 2.5rem);
+  --section-y: clamp(4.5rem, 10vw, 8rem);
+  --radius: 3px;
+  --transition: 220ms ease;
+}

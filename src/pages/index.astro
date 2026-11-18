@@ -1,0 +1,1237 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Emblem from '../components/Emblem.astro';
+import { negocio, servicos, diferenciais, whatsappLink } from '../data/negocio.js';
+import { url } from '../utils/url.js';
+---
+
+<BaseLayout title="Corte, barba e prosa em Sapucaia do Sul">
+  <!-- ===== Hero ===== -->
+  <section class="hero texture">
+    <div class="container hero__grid">
+      <div class="hero__copy">
+        <p class="hero__local">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M20 10c0 5-8 11-8 11S4 15 4 10a8 8 0 1 1 16 0Z" />
+            <circle cx="12" cy="10" r="2.6" />
+          </svg>
+          Lomba da Palmeira · Sapucaia do Sul
+        </p>
+
+        <h1>Corte, barba <br />e prosa.</h1>
+
+        <p class="hero__lead">
+          Desde 2017, a Mombaque é a barbearia de bairro de quem gosta de sair
+          com o visual no ponto. Tesoura, navalha e uma conversa que faz a
+          cadeira valer a pena.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn" href={whatsappLink()} target="_blank" rel="noopener">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.52 3.48A11.8 11.8 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.85c0 2.09.55 4.13 1.6 5.93L0 24l6.38-1.67a11.8 11.8 0 0 0 5.67 1.44h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.44ZM12.06 21.8a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.79.99 1.01-3.7-.23-.38a9.8 9.8 0 0 1-1.5-5.23c0-5.43 4.42-9.85 9.87-9.85 2.63 0 5.1 1.03 6.96 2.89a9.78 9.78 0 0 1 2.88 6.96c0 5.44-4.43 9.86-9.84 9.9Zm5.4-7.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.34 5.1 4.68.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.19-.57-.34Z" />
+            </svg>
+            Agendar pelo WhatsApp
+          </a>
+          <a class="btn btn--outline" href="#servicos">Ver serviços e valores</a>
+        </div>
+
+        <dl class="hero__facts">
+          <div>
+            <dt>Desde 2017</dt>
+            <dd>de porta aberta</dd>
+          </div>
+          <div>
+            <dt>Barba, cabelo e bigode</dt>
+            <dd>e corte infantil</dd>
+          </div>
+          <div>
+            <dt>Hora marcada</dt>
+            <dd>pelo WhatsApp</dd>
+          </div>
+        </dl>
+      </div>
+
+      <div class="hero__visual">
+        <div class="hero__selo">
+          <Emblem />
+        </div>
+        <p class="hero__legenda">
+          Rua Nair da Silva Rufino<br />
+          Lomba da Palmeira · Sapucaia do Sul
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Faixa de serviços ===== -->
+  <div class="ticker">
+    <p class="sr-only">Serviços: barba, cabelo, bigode e corte infantil.</p>
+    <div class="ticker__track" aria-hidden="true">
+      <div class="ticker__grupo">
+        <span class="ticker__item">Barba</span>
+        <span class="ticker__sep">✦</span>
+        <span class="ticker__item">Cabelo</span>
+        <span class="ticker__sep">✦</span>
+        <span class="ticker__item">Bigode</span>
+        <span class="ticker__sep">✦</span>
+        <span class="ticker__item">Corte infantil</span>
+        <span class="ticker__sep">✦</span>
+        <span class="ticker__item">Desde 2017</span>
+        <span class="ticker__sep">✦</span>
+        <span class="ticker__item">Lomba da Palmeira</span>
+        <span class="ticker__sep">✦</span>
+      </div>
+      <div class="ticker__grupo">
+        <span class="ticker__item">Barba</span>
+        <span class="ticker__sep">✦</span>
+        <span class="ticker__item">Cabelo</span>
+        <span class="ticker__sep">✦</span>
+        <span class="ticker__item">Bigode</span>
+        <span class="ticker__sep">✦</span>
+        <span class="ticker__item">Corte infantil</span>
+        <span class="ticker__sep">✦</span>
+        <span class="ticker__item">Desde 2017</span>
+        <span class="ticker__sep">✦</span>
+        <span class="ticker__item">Lomba da Palmeira</span>
+        <span class="ticker__sep">✦</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ===== Serviços ===== -->
+  <section class="section section--creme servicos" id="servicos">
+    <div class="container">
+      <div class="servicos__topo">
+        <div class="section-head">
+          <p class="rotulo">O menu da casa</p>
+          <h2>O que sai da cadeira.</h2>
+          <p>
+            Cinco serviços, um combinado: sair daqui com o visual do jeito que
+            você pediu. Escolha o seu e chame no WhatsApp para marcar.
+          </p>
+        </div>
+        <p class="servicos__nota">
+          Atendimento com hora marcada. A agenda é combinada no WhatsApp.
+        </p>
+      </div>
+
+      <div class="servicos__lista">
+        {servicos.map((servico) => (
+          <a
+            class="servico"
+            href={whatsappLink(`Olá! Quero agendar ${servico.nome} na Mombaque.`)}
+            target="_blank"
+            rel="noopener"
+          >
+            <span class="servico__nome">{servico.nome}</span>
+            <span class="servico__desc">{servico.descricao}</span>
+            <span class="servico__meta">
+              <span>{servico.duracao}</span>
+              <strong>{servico.preco}</strong>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.52 3.48A11.8 11.8 0 0 0 12.05 0C5.5 0 .2 5.3.2 11.85c0 2.09.55 4.13 1.6 5.93L0 24l6.38-1.67a11.8 11.8 0 0 0 5.67 1.44h.01c6.55 0 11.85-5.3 11.85-11.85 0-3.17-1.23-6.15-3.39-8.44ZM12.06 21.8a9.8 9.8 0 0 1-5-1.37l-.36-.21-3.79.99 1.01-3.7-.23-.38a9.8 9.8 0 0 1-1.5-5.23c0-5.43 4.42-9.85 9.87-9.85 2.63 0 5.1 1.03 6.96 2.89a9.78 9.78 0 0 1 2.88 6.96c0 5.44-4.43 9.86-9.84 9.9Zm5.4-7.38c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.64.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.49-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.61-.92-2.2-.24-.58-.49-.5-.67-.51h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48s1.07 2.88 1.22 3.08c.15.2 2.1 3.34 5.1 4.68.71.31 1.27.49 1.7.63.72.23 1.37.2 1.89.12.58-.09 1.76-.72 2.01-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.19-.57-.34Z" />
+              </svg>
+            </span>
+          </a>
+        ))}
+      </div>
+
+      <div class="servicos__rodape">
+        <p class="fine-print">
+          Valores e tempos ilustrativos neste demo. Confirme o valor atual no
+          WhatsApp antes de agendar.
+        </p>
+        <a class="link-simples" href={whatsappLink('Olá! Queria saber mais sobre os serviços da Mombaque.')} target="_blank" rel="noopener">
+          Tirar uma dúvida
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Espaço ===== -->
+  <section class="section espaco" id="espaco">
+    <div class="container espaco__grid">
+      <div class="espaco__fotos">
+        <figure class="foto foto--barba">
+          <img
+            src={url('/fotos/barba.jpg')}
+            alt="Barbeiro fazendo o acabamento da barba de um cliente"
+            width="900"
+            height="1200"
+            loading="lazy"
+          />
+          <figcaption>Barba na navalha</figcaption>
+        </figure>
+        <figure class="foto foto--salao">
+          <img
+            src={url('/fotos/salao.jpg')}
+            alt="Salão com cadeiras de barbeiro e parede de tijolo"
+            width="900"
+            height="600"
+            loading="lazy"
+          />
+          <figcaption>A casa</figcaption>
+        </figure>
+        <figure class="foto foto--corte">
+          <img
+            src={url('/fotos/corte.jpg')}
+            alt="Barbeiro cortando o cabelo de um cliente com tesoura"
+            width="900"
+            height="1200"
+            loading="lazy"
+          />
+          <figcaption>Acabamento no detalhe</figcaption>
+        </figure>
+      </div>
+
+      <div class="espaco__copy">
+        <p class="rotulo">Nosso espaço</p>
+        <h2>Uma cadeira, um espelho e boa conversa.</h2>
+        <p class="espaco__texto">
+          A Mombaque é pequena do jeito certo: dá para ouvir a conversa, o
+          barbeiro conhece o teu corte e ninguém tem pressa de te mandar embora.
+        </p>
+        <p class="espaco__texto">
+          Você chega, senta e conta o que quer. A gente capricha no corte, cuida
+          do acabamento e devolve você para a rua com o visual no ponto.
+        </p>
+
+        <p class="espaco__citacao">Corte caprichado não tem pressa.</p>
+
+        <ul class="espaco__lista">
+          <li>Atendimento com hora marcada</li>
+          <li>Barba na navalha e toalha quente</li>
+          <li>Corte infantil com paciência de sobra</li>
+          <li>Produtos para levar e manter o visual</li>
+        </ul>
+
+        <p class="fine-print espaco__nota">
+          Fotos de banco de imagens usadas apenas para ilustrar este demo.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== História ===== -->
+  <section class="section historia texture" id="historia">
+    <div class="container historia__grid">
+      <div class="historia__ano">
+        <span>desde</span>
+        <strong>2017</strong>
+        <p>Lomba da Palmeira<br />Sapucaia do Sul · RS</p>
+      </div>
+
+      <div class="historia__copy">
+        <p class="rotulo">A história</p>
+        <h2>De bairro, com orgulho.</h2>
+        <p class="historia__texto">
+          Em 2017, a Mombaque abriu as portas na Lomba da Palmeira com uma ideia
+          simples: fazer barbearia de verdade, sem pressa e sem frescura. De lá
+          para cá, a cadeira virou ponto de encontro de quem gosta de sair com o
+          visual no ponto e de trocar uma ideia.
+        </p>
+        <p class="historia__texto">
+          O que não muda é o capricho: tesoura afiada, navalha no ponto e
+          atenção a cada detalhe. Do primeiro corte da criança ao bigode de quem
+          tem história para contar.
+        </p>
+
+        <dl class="diferenciais">
+          {diferenciais.map((item) => (
+            <div>
+              <dt>{item.titulo}</dt>
+              <dd>{item.texto}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Curso e produtos ===== -->
+  <section class="section curso" id="curso">
+    <div class="container">
+      <div class="section-head">
+        <p class="rotulo">Além da cadeira</p>
+        <h2>Aprender e levar o cuidado para casa.</h2>
+        <p>
+          A Mombaque também ensina quem quer entrar na profissão e vende os
+          produtos que usa aqui dentro. Tudo combinado direto com a gente.
+        </p>
+      </div>
+
+      <div class="curso__dupla">
+        <article class="bloco">
+          <svg class="bloco__icone" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="6" cy="6" r="2.6" />
+            <circle cx="6" cy="18" r="2.6" />
+            <path d="M8.2 7.6 20 19M8.2 16.4 20 5" />
+          </svg>
+          <p class="bloco__tipo">Curso</p>
+          <h3>Curso iniciante de barbearia</h3>
+          <p>
+            Para quem quer começar na profissão ou afiar o que já sabe. Prática
+            na cadeira, com quem está no dia a dia da barbearia.
+          </p>
+          <a
+            class="btn btn--outline"
+            href={whatsappLink('Olá! Quero saber mais sobre o curso iniciante de barbearia.')}
+            target="_blank"
+            rel="noopener"
+          >
+            Falar sobre o curso
+          </a>
+        </article>
+
+        <article class="bloco">
+          <svg class="bloco__icone" width="44" height="44" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M9 3h6v3H9z" />
+            <path d="M8 6h8l1 4v9a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1v-9z" />
+            <path d="M7.5 12h9" />
+          </svg>
+          <p class="bloco__tipo">Produtos</p>
+          <h3>Pomada, óleo e navalha</h3>
+          <p>
+            Os mesmos produtos que a gente usa na cadeira, para manter o visual
+            em casa. Fale com a gente para ver o que tem disponível.
+          </p>
+          <a
+            class="btn btn--outline"
+            href={negocio.instagramUrl}
+            target="_blank"
+            rel="noopener"
+          >
+            Ver produtos no Instagram
+          </a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Onde fica ===== -->
+  <section class="section onde" id="onde">
+    <div class="container onde__grid">
+      <div class="onde__copy">
+        <p class="rotulo">Onde fica</p>
+        <h2>Na Lomba da Palmeira, pertinho de você.</h2>
+        <p class="onde__texto">
+          A barbearia fica em Sapucaia do Sul. Se vier de longe, chama no
+          WhatsApp que a gente explica o caminho e combina o melhor horário.
+        </p>
+
+        <address class="onde__endereco">
+          <strong>{negocio.endereco.rua}</strong><br />
+          {negocio.endereco.bairro} · {negocio.endereco.cidade}/{negocio.endereco.uf}<br />
+          CEP {negocio.endereco.cep}
+        </address>
+
+        <div class="onde__contatos">
+          <a class="btn" href={whatsappLink()} target="_blank" rel="noopener">
+            Agendar pelo WhatsApp
+          </a>
+          <a class="btn btn--outline" href={negocio.googleMapsUrl} target="_blank" rel="noopener">
+            Abrir no Google Maps
+          </a>
+        </div>
+
+        <div class="onde__horario">
+          <h3>Horário</h3>
+          <p>
+            Atendimento com hora marcada. Consulte os horários da semana pelo
+            WhatsApp — a agenda é combinada conforme a demanda.
+          </p>
+        </div>
+      </div>
+
+      <figure class="onde__foto">
+        <img
+          src={url('/fotos/fachada.jpg')}
+          alt="Fachada da Barbearia Mombaque com o brasão da marca na parede"
+          width="1100"
+          height="1100"
+          loading="lazy"
+        />
+        <figcaption>
+          <span>A casa, em Sapucaia do Sul</span>
+          <a href={negocio.instagramUrl} target="_blank" rel="noopener">{negocio.instagram}</a>
+        </figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- ===== CTA final ===== -->
+  <section class="cta-final">
+    <svg class="cta-final__bigode" viewBox="0 0 24 24" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21 12c-2 0-3-3-6-3s-3 2-3 2s0-2-3-2s-4 3-6 3c-1 0-2-1-2-1s1 5 5 5c5 0 6-3 6-3s1 3 6 3c4 0 5-5 5-5s-1 1-2 1" fill="currentColor" />
+    </svg>
+
+    <div class="container cta-final__inner">
+      <div>
+        <p class="rotulo">Agenda aberta</p>
+        <h2>Passa na cadeira.</h2>
+        <p>
+          Manda uma mensagem, escolhe o melhor horário e vem. A gente cuida do
+          corte; a prosa fica por sua conta.
+        </p>
+      </div>
+      <div class="cta-final__actions">
+        <a class="btn btn--dark" href={whatsappLink()} target="_blank" rel="noopener">
+          Agendar pelo WhatsApp
+        </a>
+        <a class="btn btn--dark" href={`tel:+${negocio.whatsapp}`}>{negocio.telefoneDisplay}</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  /* ===== Hero ===== */
+  .hero {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--cacau);
+    border-bottom: 1px solid var(--borda);
+  }
+
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -18rem;
+    right: -14rem;
+    width: 52rem;
+    height: 52rem;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(178, 122, 74, 0.2), transparent 64%);
+    pointer-events: none;
+  }
+
+  .hero__grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1.06fr 0.94fr;
+    align-items: center;
+    gap: clamp(2rem, 6vw, 5rem);
+    padding-block: clamp(3.5rem, 8vw, 7rem);
+  }
+
+  .hero__local {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--bronze-claro);
+    font-size: var(--text-sm);
+    font-weight: 500;
+  }
+
+  .hero h1 {
+    max-width: 11ch;
+    font-size: clamp(3.2rem, 8.2vw, 6.6rem);
+    line-height: 0.95;
+    letter-spacing: -0.055em;
+  }
+
+  .hero__lead {
+    max-width: 45ch;
+    margin-top: 1.6rem;
+    color: var(--texto-suave);
+    font-size: var(--text-lg);
+    line-height: 1.65;
+  }
+
+  .hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 2rem;
+  }
+
+  .hero__facts {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, auto));
+    gap: 1.25rem 2.25rem;
+    margin-top: 2.6rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--borda);
+  }
+
+  .hero__facts div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15rem;
+  }
+
+  .hero__facts dt {
+    color: var(--creme);
+    font-family: var(--font-display);
+    font-size: 1.02rem;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .hero__facts dd {
+    margin: 0;
+    color: var(--texto-suave);
+    font-size: 0.78rem;
+  }
+
+  .hero__visual {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-self: center;
+  }
+
+  .hero__selo {
+    width: clamp(15rem, 27vw, 24rem);
+    transform: rotate(-3deg);
+    filter: drop-shadow(14px 16px 0 rgba(15, 7, 4, 0.3));
+    animation: selo 700ms cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+
+  .hero__selo :global(svg) {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .hero__legenda {
+    margin-top: 1.8rem;
+    color: var(--texto-suave);
+    font-size: 0.76rem;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  @keyframes selo {
+    from {
+      opacity: 0;
+      transform: rotate(-9deg) scale(0.94);
+    }
+    to {
+      opacity: 1;
+      transform: rotate(-3deg) scale(1);
+    }
+  }
+
+  /* ===== Faixa ===== */
+  .ticker {
+    overflow: hidden;
+    padding-block: 0.85rem;
+    border-bottom: 1px solid var(--cacau-900);
+    background: var(--creme);
+    color: var(--cacau-900);
+  }
+
+  .ticker__track {
+    display: flex;
+    width: max-content;
+    animation: ticker 34s linear infinite;
+  }
+
+  .ticker:hover .ticker__track {
+    animation-play-state: paused;
+  }
+
+  .ticker__grupo {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: 1.1rem;
+    padding-right: 1.1rem;
+    white-space: nowrap;
+  }
+
+  .ticker__item {
+    font-family: var(--font-display);
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  .ticker__sep {
+    color: var(--bronze);
+    font-size: 0.85rem;
+  }
+
+  @keyframes ticker {
+    to {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* ===== Serviços ===== */
+  .servicos__topo {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .servicos__topo .section-head {
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+  }
+
+  .servicos__nota {
+    flex: 0 0 auto;
+    max-width: 17rem;
+    margin-bottom: clamp(2rem, 4vw, 3rem);
+    padding-left: 1rem;
+    border-left: 1px solid rgba(58, 35, 23, 0.35);
+    color: var(--cacau-600);
+    font-size: var(--text-sm);
+    line-height: 1.6;
+  }
+
+  .servicos__lista {
+    border-bottom: 1px solid rgba(58, 35, 23, 0.28);
+  }
+
+  .servico {
+    display: grid;
+    grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.45fr) auto;
+    grid-template-areas: 'nome desc meta';
+    align-items: center;
+    gap: 1.5rem;
+    padding: 1.35rem 1rem;
+    border-top: 1px solid rgba(58, 35, 23, 0.28);
+    transition:
+      background-color var(--transition),
+      color var(--transition),
+      padding var(--transition);
+  }
+
+  .servico:hover,
+  .servico:focus-visible {
+    background: var(--cacau);
+    color: var(--creme);
+    padding-left: 1.5rem;
+  }
+
+  .servico__nome {
+    grid-area: nome;
+    font-family: var(--font-display);
+    font-size: clamp(1.5rem, 2.9vw, 2.15rem);
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+  }
+
+  .servico__desc {
+    grid-area: desc;
+    color: var(--cacau-600);
+    font-size: 0.94rem;
+    line-height: 1.55;
+    transition: color var(--transition);
+  }
+
+  .servico__meta {
+    grid-area: meta;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1.25rem;
+    font-size: 0.82rem;
+  }
+
+  .servico__meta > span {
+    color: var(--cacau-600);
+    transition: color var(--transition);
+  }
+
+  .servico__meta strong {
+    font-family: var(--font-display);
+    font-size: 1.12rem;
+    font-weight: 700;
+    white-space: nowrap;
+  }
+
+  .servico__meta svg {
+    opacity: 0.5;
+  }
+
+  .servico:hover .servico__desc,
+  .servico:hover .servico__meta > span,
+  .servico:focus-visible .servico__desc,
+  .servico:focus-visible .servico__meta > span {
+    color: var(--texto-suave);
+  }
+
+  .servico:hover .servico__meta svg,
+  .servico:focus-visible .servico__meta svg {
+    opacity: 1;
+  }
+
+  .servicos__rodape {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem 2rem;
+    margin-top: 1.5rem;
+  }
+
+  .servicos__rodape .fine-print {
+    max-width: 48ch;
+  }
+
+  /* ===== Espaço ===== */
+  .espaco {
+    background-color: var(--cacau-900);
+  }
+
+  .espaco__grid {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .espaco__fotos {
+    display: grid;
+    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+    gap: 1rem;
+    height: clamp(26rem, 44vw, 36rem);
+  }
+
+  .foto {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0.45rem 0.45rem 0.15rem;
+    border: 1px solid var(--borda);
+    background: var(--cacau);
+  }
+
+  .foto--barba {
+    grid-row: span 2;
+  }
+
+  .foto img {
+    flex: 1;
+    width: 100%;
+    min-height: 0;
+    object-fit: cover;
+    filter: sepia(0.12) saturate(0.92) contrast(1.04);
+  }
+
+  .foto figcaption {
+    padding: 0.5rem 0.2rem 0.2rem;
+    color: var(--texto-suave);
+    font-size: 0.72rem;
+    line-height: 1.3;
+  }
+
+  .espaco__texto {
+    max-width: 48ch;
+    margin-top: 1.15rem;
+    color: var(--texto-suave);
+    font-size: var(--text-lg);
+  }
+
+  .espaco__citacao {
+    margin-top: 2rem;
+    padding-left: 1.1rem;
+    border-left: 2px solid var(--bronze);
+    color: var(--creme);
+    font-family: var(--font-display);
+    font-size: clamp(1.2rem, 2vw, 1.5rem);
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: -0.02em;
+  }
+
+  .espaco__lista {
+    display: grid;
+    gap: 0.65rem;
+    margin-top: 1.9rem;
+  }
+
+  .espaco__lista li {
+    display: flex;
+    gap: 0.7rem;
+    color: var(--texto-suave);
+    font-size: 0.92rem;
+  }
+
+  .espaco__lista li::before {
+    content: '';
+    flex: 0 0 auto;
+    width: 0.4rem;
+    height: 0.4rem;
+    margin-top: 0.55rem;
+    background: var(--bronze);
+    transform: rotate(45deg);
+  }
+
+  .espaco__nota {
+    margin-top: 1.5rem;
+    opacity: 0.75;
+  }
+
+  /* ===== História ===== */
+  .historia {
+    background-color: var(--cacau);
+    border-top: 1px solid var(--borda);
+  }
+
+  .historia__grid {
+    display: grid;
+    grid-template-columns: 0.55fr 1fr;
+    align-items: start;
+    gap: clamp(2rem, 6vw, 5rem);
+  }
+
+  .historia__ano {
+    padding-top: 0.5rem;
+  }
+
+  .historia__ano > span {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--bronze-claro);
+    font-size: var(--text-sm);
+  }
+
+  .historia__ano strong {
+    display: block;
+    color: var(--creme);
+    font-family: var(--font-display);
+    font-size: clamp(5.5rem, 14vw, 10.5rem);
+    font-weight: 700;
+    letter-spacing: -0.07em;
+    line-height: 0.78;
+  }
+
+  .historia__ano p {
+    margin-top: 1.25rem;
+    color: var(--texto-suave);
+    font-size: var(--text-sm);
+    line-height: 1.7;
+  }
+
+  .historia__texto {
+    max-width: 54ch;
+    margin-top: 1.15rem;
+    color: var(--texto-suave);
+    font-size: var(--text-lg);
+  }
+
+  .diferenciais {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 2.2rem;
+    padding-top: 1.6rem;
+    border-top: 1px solid var(--borda);
+  }
+
+  .diferenciais dt {
+    color: var(--creme);
+    font-family: var(--font-display);
+    font-size: 1.05rem;
+    font-weight: 600;
+  }
+
+  .diferenciais dd {
+    margin: 0.4rem 0 0;
+    color: var(--texto-suave);
+    font-size: 0.85rem;
+    line-height: 1.55;
+  }
+
+  /* ===== Curso e produtos ===== */
+  .curso {
+    background-color: var(--cacau-700);
+    border-block: 1px solid var(--borda);
+  }
+
+  .curso__dupla {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-top: 1px solid var(--borda-forte);
+  }
+
+  .bloco {
+    position: relative;
+    padding: clamp(1.5rem, 4vw, 3rem);
+  }
+
+  .bloco + .bloco {
+    border-left: 1px solid var(--borda-forte);
+  }
+
+  .bloco__icone {
+    position: absolute;
+    top: clamp(1.5rem, 4vw, 3rem);
+    right: clamp(1.5rem, 4vw, 3rem);
+    color: var(--bronze-claro);
+    opacity: 0.65;
+  }
+
+  .bloco__tipo {
+    color: var(--bronze-claro);
+    font-size: var(--text-sm);
+    font-weight: 600;
+  }
+
+  .bloco h3 {
+    max-width: 18ch;
+    margin-top: 0.7rem;
+    font-size: clamp(1.55rem, 3vw, 2.25rem);
+  }
+
+  .bloco > p:not(.bloco__tipo) {
+    max-width: 40ch;
+    margin-top: 0.9rem;
+    color: var(--texto-suave);
+    font-size: 0.95rem;
+  }
+
+  .bloco .btn {
+    margin-top: 1.6rem;
+  }
+
+  /* ===== Onde fica ===== */
+  .onde {
+    background-color: var(--cacau-900);
+  }
+
+  .onde__grid {
+    display: grid;
+    grid-template-columns: 1fr 0.82fr;
+    align-items: center;
+    gap: clamp(2.5rem, 6vw, 5rem);
+  }
+
+  .onde__texto {
+    max-width: 48ch;
+    margin-top: 1.15rem;
+    color: var(--texto-suave);
+    font-size: var(--text-lg);
+  }
+
+  .onde__endereco {
+    margin-top: 1.7rem;
+    padding-left: 1rem;
+    border-left: 2px solid var(--bronze);
+    color: var(--texto-suave);
+    font-size: var(--text-sm);
+    font-style: normal;
+    line-height: 1.8;
+  }
+
+  .onde__endereco strong {
+    color: var(--creme);
+    font-weight: 600;
+  }
+
+  .onde__contatos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.7rem;
+  }
+
+  .onde__horario {
+    display: grid;
+    grid-template-columns: 7rem 1fr;
+    gap: 1.5rem;
+    margin-top: 2.2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--borda);
+  }
+
+  .onde__horario h3 {
+    color: var(--creme);
+    font-family: var(--font-body);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    letter-spacing: 0;
+    line-height: 1.5;
+  }
+
+  .onde__horario p {
+    color: var(--texto-suave);
+    font-size: var(--text-sm);
+    line-height: 1.7;
+  }
+
+  .onde__foto {
+    margin: 0;
+    padding: 0.55rem;
+    border: 1px solid var(--borda);
+    background: var(--cacau);
+    transform: rotate(1.2deg);
+    box-shadow: var(--sombra-dura);
+  }
+
+  .onde__foto img {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    filter: sepia(0.1) saturate(0.92) contrast(1.03);
+  }
+
+  .onde__foto figcaption {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 0.35rem 1rem;
+    padding: 0.65rem 0.25rem 0.2rem;
+    color: var(--texto-suave);
+    font-size: 0.72rem;
+    line-height: 1.4;
+  }
+
+  .onde__foto figcaption a {
+    color: var(--creme);
+    border-bottom: 1px solid var(--borda-forte);
+  }
+
+  /* ===== CTA final ===== */
+  .cta-final {
+    position: relative;
+    overflow: hidden;
+    padding-block: clamp(4rem, 9vw, 7rem);
+    background: var(--creme);
+    color: var(--cacau-900);
+  }
+
+  .cta-final::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image:
+      repeating-linear-gradient(45deg, rgba(58, 35, 23, 0.04) 0 1px, transparent 1px 18px),
+      repeating-linear-gradient(-45deg, rgba(58, 35, 23, 0.04) 0 1px, transparent 1px 18px);
+    pointer-events: none;
+  }
+
+  .cta-final__bigode {
+    position: absolute;
+    right: -2rem;
+    bottom: -2.5rem;
+    width: clamp(16rem, 34vw, 30rem);
+    color: var(--cacau);
+    opacity: 0.08;
+    transform: rotate(-4deg);
+  }
+
+  .cta-final__inner {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .cta-final .rotulo {
+    color: var(--vermelho);
+  }
+
+  .cta-final h2 {
+    max-width: 11ch;
+    color: var(--cacau-900);
+    font-size: clamp(3rem, 7.5vw, 5.8rem);
+    line-height: 0.92;
+    letter-spacing: -0.06em;
+  }
+
+  .cta-final p:not(.rotulo) {
+    max-width: 40ch;
+    margin-top: 1.1rem;
+    color: var(--cacau-600);
+    font-size: var(--text-lg);
+  }
+
+  .cta-final__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  /* ===== Responsivo ===== */
+  @media (max-width: 64rem) {
+    .hero__grid,
+    .espaco__grid,
+    .onde__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .hero__visual {
+      justify-self: start;
+      flex-direction: row;
+      align-items: center;
+      gap: 2rem;
+    }
+
+    .hero__legenda {
+      margin-top: 0;
+      text-align: left;
+    }
+
+    .hero__facts {
+      max-width: 36rem;
+    }
+
+    .espaco__fotos {
+      height: clamp(24rem, 58vw, 34rem);
+    }
+
+    .historia__grid {
+      grid-template-columns: 1fr;
+    }
+
+    .historia__ano {
+      display: flex;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 0.5rem 1.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: 1px solid var(--borda);
+    }
+
+    .historia__ano > span {
+      margin: 0;
+    }
+
+    .historia__ano p {
+      margin: 0;
+    }
+
+    .onde__foto {
+      max-width: 32rem;
+      justify-self: start;
+    }
+  }
+
+  @media (max-width: 56rem) {
+    .servicos__topo {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    .servicos__nota {
+      max-width: 46ch;
+      margin-bottom: 2rem;
+    }
+
+    .curso__dupla {
+      grid-template-columns: 1fr;
+    }
+
+    .bloco + .bloco {
+      border-top: 1px solid var(--borda-forte);
+      border-left: 0;
+    }
+
+    .cta-final__inner {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  @media (max-width: 48rem) {
+    .hero__visual {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0;
+    }
+
+    .hero__legenda {
+      margin-top: 1.5rem;
+    }
+
+    .hero__facts {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .servico {
+      grid-template-columns: 1fr auto;
+      grid-template-areas:
+        'nome meta'
+        'desc desc';
+      gap: 0.45rem 1rem;
+      padding: 1.15rem 0.5rem;
+    }
+
+    .servico:hover,
+    .servico:focus-visible {
+      padding-left: 0.9rem;
+    }
+
+    .servico__desc {
+      margin-top: 0.25rem;
+    }
+
+    .servico__meta {
+      gap: 0.9rem;
+    }
+
+    .servico__meta svg {
+      display: none;
+    }
+
+    .espaco__fotos {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto;
+      height: auto;
+    }
+
+    .foto--barba {
+      grid-row: auto;
+    }
+
+    .foto img {
+      flex: none;
+      aspect-ratio: 4 / 3;
+    }
+
+    .foto--barba img {
+      aspect-ratio: 3 / 4;
+    }
+
+    .diferenciais {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    .onde__horario {
+      grid-template-columns: 1fr;
+      gap: 0.4rem;
+    }
+
+    .onde__foto {
+      order: -1;
+      max-width: none;
+    }
+  }
+
+  @media (max-width: 34rem) {
+    .hero__facts {
+      grid-template-columns: 1fr;
+      gap: 0.9rem;
+    }
+
+    .hero__actions .btn,
+    .cta-final__actions .btn,
+    .onde__contatos .btn {
+      width: 100%;
+    }
+
+    .servico__meta > span {
+      display: none;
+    }
+
+    .ticker__item {
+      font-size: 0.9rem;
+    }
+  }
+</style>
