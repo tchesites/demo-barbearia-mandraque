@@ -84,7 +84,8 @@ demo-barbearia-mombaque/
 **GitHub Pages**, por **GitHub Actions** (`.github/workflows/deploy.yml`): cada
 push em `main` roda `npm ci` + `astro build` e publica o artefato.
 
-- **URL:** <https://tchesites.github.io/demo-barbearia-mombaque/>
+- **URL:** <https://tchesites.github.io/demo-barbearia-mombaque/> — no ar.
+- **Status:** publicado em 18/11/2026.
 - **Base:** `/demo-barbearia-mombaque`; links internos via `url()`.
 - **Setup:** repo público, topic `demo` e Pages em
   *Settings → Pages → Source = GitHub Actions*.
