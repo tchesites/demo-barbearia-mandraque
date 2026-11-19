@@ -1,26 +1,25 @@
 export const negocio = {
-  nome: 'Barbearia Mombaque',
-  desde: 2017,
-  cidade: 'Sapucaia do Sul',
-  bairro: 'Lomba da Palmeira',
+  nome: 'Barbearia Mandraque',
+  desde: 2015,
+  cidade: 'Canoas',
+  bairro: 'Jardim das Acácias',
   endereco: {
-    rua: 'Rua Nair da Silva Rufino',
-    bairro: 'Lomba da Palmeira',
-    cidade: 'Sapucaia do Sul',
+    rua: 'Rua das Acácias, 512',
+    bairro: 'Jardim das Acácias',
+    cidade: 'Canoas',
     uf: 'RS',
-    cep: '93230-520',
+    cep: '92300-000',
   },
-  telefoneDisplay: '(51) 99158-3219',
-  whatsapp: '5551991583219',
-  instagram: '@barbeariamombaque',
-  instagramUrl: 'https://www.instagram.com/barbeariamombaque/',
-  linktreeUrl: 'https://linktr.ee/barbeariamombaque',
+  telefoneDisplay: '(51) 90000-0000',
+  whatsapp: '5551900000000',
+  instagram: '@barbeariamandraque',
+  instagramUrl: 'https://www.instagram.com/',
   googleMapsUrl:
-    'https://www.google.com/maps/place/Barbearia+Mombaque/@-29.8340418,-51.1286628,17z/data=!3m1!4b1!4m5!3m4!1s0x0:0x665ca2888ba4dba0!8m2!3d-29.8340866!4d-51.1286509',
+    'https://www.google.com/maps/search/?api=1&query=Rua+das+Ac%C3%A1cias%2C+512%2C+Canoas%2C+RS',
 };
 
 export const whatsappLink = (
-  mensagem = 'Olá! Vim pelo site e quero agendar um horário na Mombaque.',
+  mensagem = 'Olá! Vim pelo site e quero agendar um horário na Mandraque.',
 ) => `https://wa.me/${negocio.whatsapp}?text=${encodeURIComponent(mensagem)}`;
 
 export const servicos = [

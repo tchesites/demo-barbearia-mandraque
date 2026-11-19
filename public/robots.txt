@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://tchesites.github.io/demo-barbearia-mombaque/sitemap.xml
+Sitemap: https://tchesites.github.io/demo-barbearia-mandraque/sitemap.xml

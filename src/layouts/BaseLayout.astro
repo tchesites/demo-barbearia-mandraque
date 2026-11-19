@@ -13,7 +13,7 @@ interface Props {
 
 const {
   title,
-  description = 'Corte, barba e bigode na Lomba da Palmeira, Sapucaia do Sul. Desde 2017, a Mombaque junta técnica de barbearia e um atendimento de quem te conhece pelo nome.',
+  description = 'Corte, barba e bigode no Jardim das Acácias, em Canoas. Desde 2015, a Mandraque junta técnica de barbearia e um atendimento de quem te conhece pelo nome.',
 } = Astro.props;
 
 const siteTitle = `${title} · ${negocio.nome}`;
@@ -28,14 +28,14 @@ const jsonLd = {
   '@type': 'BarberShop',
   name: negocio.nome,
   description:
-    'Barbearia em Sapucaia do Sul desde 2017. Corte, barba, bigode e corte infantil na Lomba da Palmeira.',
+    'Barbearia em Canoas desde 2015. Corte, barba, bigode e corte infantil no Jardim das Acácias.',
   url: canonical.href,
   image: ogImage.href,
-  telephone: '+55 51 99158-3219',
+  telephone: '+55 51 90000-0000',
   priceRange: 'R$ 20–70',
   currenciesAccepted: 'BRL',
   paymentAccepted: 'Dinheiro, Cartão de crédito, Cartão de débito, Pix',
-  foundingDate: '2017',
+  foundingDate: '2015',
   address: {
     '@type': 'PostalAddress',
     streetAddress: negocio.endereco.rua,
@@ -44,17 +44,11 @@ const jsonLd = {
     postalCode: negocio.endereco.cep,
     addressCountry: 'BR',
   },
-  geo: {
-    '@type': 'GeoCoordinates',
-    latitude: -29.8340866,
-    longitude: -51.1286509,
-  },
   hasMap: negocio.googleMapsUrl,
   areaServed: {
     '@type': 'City',
-    name: 'Sapucaia do Sul',
+    name: 'Canoas',
   },
-  sameAs: [negocio.instagramUrl, negocio.linktreeUrl],
   potentialAction: {
     '@type': 'ReserveAction',
     target: {
@@ -69,7 +63,7 @@ const jsonLd = {
   },
   hasOfferCatalog: {
     '@type': 'OfferCatalog',
-    name: 'Serviços da Barbearia Mombaque',
+    name: 'Serviços da Barbearia Mandraque',
     itemListElement: servicos.map((servico) => ({
       '@type': 'Offer',
       itemOffered: {
@@ -105,7 +99,7 @@ const jsonLd = {
     <meta property="og:image" content={ogImage} />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
-    <meta property="og:image:alt" content="Brasão creme da Barbearia Mombaque sobre fundo marrom" />
+    <meta property="og:image:alt" content="Selo creme da Barbearia Mandraque sobre fundo marrom" />
 
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content={siteTitle} />

@@ -8,79 +8,68 @@ const { class: className } = Astro.props;
 
 <svg
   class:list={['emblem', className]}
-  viewBox="0 0 360 420"
+  viewBox="0 0 420 420"
   role="img"
-  aria-label="Brasão da Barbearia Mombaque: escudo creme com bigode e a inscrição desde 2017"
+  aria-label="Selo da Barbearia Mandraque: círculo creme com poste de barbeiro e a inscrição desde 2015"
   xmlns="http://www.w3.org/2000/svg"
 >
-  <path
-    d="M180 8 L338 34 V260 C338 291 320 317 292 331 L180 410 L68 331 C40 317 22 291 22 260 V34 Z"
-    fill="var(--creme, #f4e2b8)"
-  />
-  <path
-    d="M180 30 L316 52 V259 C316 284 301 306 278 318 L180 385 L82 318 C59 306 44 284 44 259 V52 Z"
-    fill="none"
-    stroke="var(--cacau-700, #3a2317)"
-    stroke-width="2.5"
-  />
+  <circle cx="210" cy="210" r="200" fill="var(--creme, #f4e2b8)" />
+  <circle cx="210" cy="210" r="186" fill="none" stroke="var(--cacau-700, #3a2317)" stroke-width="2.5" />
+  <circle cx="210" cy="210" r="177" fill="none" stroke="var(--cacau-700, #3a2317)" stroke-width="0.8" opacity="0.45" />
 
+  <path id="arco-mandraque" d="M 88 140 Q 210 32 332 140" fill="none" />
   <text
-    x="180"
-    y="132"
-    text-anchor="middle"
     fill="var(--cacau-700, #3a2317)"
-    font-family="'Hepta Slab', Georgia, serif"
-    font-size="47"
-    font-weight="800"
-    letter-spacing="1"
-    textLength="238"
-    lengthAdjust="spacingAndGlyphs"
+    font-family="'Archivo', 'Segoe UI', sans-serif"
+    font-size="21"
+    font-weight="600"
+    letter-spacing="7"
   >
-    BARBEARIA
-  </text>
-  <text
-    x="180"
-    y="188"
-    text-anchor="middle"
-    fill="var(--cacau-700, #3a2317)"
-    font-family="'Hepta Slab', Georgia, serif"
-    font-size="43"
-    font-weight="800"
-    letter-spacing="1"
-    textLength="244"
-    lengthAdjust="spacingAndGlyphs"
-  >
-    MOMBAQUE
+    <textPath href="#arco-mandraque" startOffset="50%" text-anchor="middle">BARBEARIA</textPath>
   </text>
 
-  <g transform="translate(106 160) scale(6.2)" fill="var(--cacau-700, #3a2317)">
-    <path
-      d="M21 12c-2 0-3-3-6-3s-3 2-3 2s0-2-3-2s-4 3-6 3c-1 0-2-1-2-1s1 5 5 5c5 0 6-3 6-3s1 3 6 3c4 0 5-5 5-5s-1 1-2 1"
-    />
+  <g transform="translate(210 186)">
+    <rect x="-30" y="-53" width="60" height="106" rx="27" fill="var(--cacau-700, #3a2317)" />
+    <clipPath id="pole-emblem">
+      <rect x="-30" y="-53" width="60" height="106" rx="27" />
+    </clipPath>
+    <g clip-path="url(#pole-emblem)" stroke="var(--creme, #f4e2b8)" stroke-width="10">
+      <path d="M-48 -88 L34 8" />
+      <path d="M-48 -53 L46 41" />
+      <path d="M-48 -18 L46 76" />
+      <path d="M-48 17 L46 111" />
+      <path d="M-48 52 L20 120" />
+    </g>
+    <rect x="-38" y="-66" width="76" height="14" rx="5" fill="var(--cacau-700, #3a2317)" />
+    <rect x="-38" y="52" width="76" height="14" rx="5" fill="var(--cacau-700, #3a2317)" />
+    <circle cx="0" cy="-72" r="5.5" fill="var(--cacau-700, #3a2317)" />
   </g>
 
   <text
-    x="180"
-    y="316"
-    text-anchor="middle"
-    fill="var(--cacau-700, #3a2317)"
-    font-family="'Archivo', 'Segoe UI', sans-serif"
-    font-size="12"
-    font-weight="600"
-    letter-spacing="4"
-  >
-    DESDE
-  </text>
-  <text
-    x="180"
-    y="343"
+    x="210"
+    y="306"
     text-anchor="middle"
     fill="var(--cacau-700, #3a2317)"
     font-family="'Hepta Slab', Georgia, serif"
-    font-size="18"
-    font-weight="700"
-    letter-spacing="2"
+    font-size="54"
+    font-weight="800"
+    letter-spacing="0"
+    textLength="282"
+    lengthAdjust="spacingAndGlyphs"
   >
-    • 2017 •
+    MANDRAQUE
+  </text>
+
+  <text
+    x="210"
+    y="362"
+    text-anchor="middle"
+    fill="var(--cacau-700, #3a2317)"
+    font-family="'Archivo', 'Segoe UI', sans-serif"
+    font-size="15"
+    font-weight="600"
+    letter-spacing="4.5"
+  >
+    DESDE 2015
   </text>
 </svg>
